@@ -1,0 +1,16 @@
+{
+  "name": "MyMuseBot",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12.1",  // or your preferred base
+  "features": {},
+  "customizations": {},
+  "forwardPorts": [],
+  "postCreateCommand": "pip install -r requirements.txt",
+
+  "mounts": [],
+  "remoteEnv": {
+    "TOGETHER_API_KEY": "${{ secrets.TOGETHER_API_KEY }}",
+    "HF_TOKEN": "${{ secrets.HF_TOKEN }}",
+    "HF_USERNAME": "${{ secrets.HF_USERNAME }}",
+    "SPACE_NAME": "${{ secrets.SPACE_NAME }}"
+  }
+}
